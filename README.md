@@ -5,7 +5,7 @@
 ### Basic
 ```ts
 
-import { TerminalSpinner } from "https://x.nest.land/spinners@1.3.0/mod.ts";
+import { TerminalSpinner } from "https://deno.land/spinners@1.3.0/mod.ts";
 import { sleep } from "https://x.nest.land/sleep@1.0.0/mod.ts";
 
 const terminalSpinner = new TerminalSpinner("I will be back in about 3 seconds");
@@ -19,7 +19,7 @@ terminalSpinner.succeed("Action completed");
 ### Advanced
 ```ts
 
-import { TerminalSpinner, SpinnerTypes } from "https://x.nest.land/spinners@1.3.0/mod.ts";
+import { TerminalSpinner, SpinnerTypes } from "https://deno.land/spinners@1.3.0/mod.ts";
 import { sleep } from "https://x.nest.land/sleep@1.0.0/mod.ts";
 
 const terminalSpinner = new TerminalSpinner({
@@ -46,18 +46,18 @@ Check the code for details - it should be self explaining.
 ## Trigger Usage Examples
 
 ```sh
-deno run https://x.nest.land/spinners@1.3.0/usage-example-basic.ts
+deno run https://deno.land/spinners@1.3.0/usage-example-basic.ts
 ```
 
 ```sh
-deno run https://x.nest.land/spinners@1.3.0/usage-example-advanced.ts
+deno run https://deno.land/spinners@1.3.0/usage-example-advanced.ts
 ```
 
 ## Trigger Test Execution
 
 ```sh
 
-deno test https://x.nest.land/spinners@1.3.0/test.ts
+deno test https://deno.land/spinners@1.3.0/test.ts
   
 ```
 
