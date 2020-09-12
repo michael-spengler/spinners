@@ -1,2 +1,2 @@
-export * from './spinners.ts'
+export * from './spinner-types.ts'
 export * from './terminal-spinner.ts'

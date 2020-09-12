@@ -2,6 +2,7 @@
   "name": "spinners",
   "description": "Terminal Spinners for Deno",
   "stable": true,
+  "repository": "https://github.com/michael-spengler/spinners",
   "files": [
     "mod.ts",
     "README.md",

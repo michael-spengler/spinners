@@ -1,4 +1,4 @@
-import { Spinner, Spinners } from "./spinners.ts";
+import { Spinner, SpinnerTypes } from "./spinner-types.ts";
 import { writeLine, colorise, Color, clearLine, showCursor, hideCursor, } from "./util.ts";
 import * as Colors from "https://deno.land/std@0.52.0/fmt/colors.ts";
 
@@ -17,7 +17,7 @@ export class TerminalSpinner {
 	private options: Options = {
 		text: "",
 		color: "white",
-		spinner: Deno.build.os === "windows" ? Spinners.windows : Spinners.dots,
+		spinner: Deno.build.os === "windows" ? SpinnerTypes.windows : SpinnerTypes.dots,
 		prefixText: "",
 		indent: 0,
 		cursor: false,

@@ -1,4 +1,4 @@
-import { TerminalSpinner } from "https://x.nest.land/spinners@1.1.0/mod.ts";
+import { TerminalSpinner } from "https://x.nest.land/spinners@1.2.0/mod.ts";
 import { assertThrows } from "https://deno.land/std@0.51.0/testing/asserts.ts";
 import { expect } from "https://deno.land/x/expect/mod.ts";
 import { sleep } from "https://x.nest.land/sleep@1.0.0/mod.ts";

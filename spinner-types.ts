@@ -3,7 +3,7 @@ export interface Spinner {
 	frames: string[];
 }
 
-export const Spinners = {
+export const SpinnerTypes = {
 	windows: {
 		interval: 80,
 		frames: ["/", "-", "\\", "|"],
