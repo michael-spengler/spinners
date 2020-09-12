@@ -6,7 +6,7 @@
   "files": [
     "mod.ts",
     "README.md",
-    "spinners.ts",
+    "spinner-types.ts",
     "test.ts",
     "terminal-spinner.ts",
     "usage-example-advanced.ts",

@@ -1,4 +1,4 @@
-import { TerminalSpinner, SpinnerTypes } from "https://x.nest.land/spinners@1.2.0/mod.ts";
+import { TerminalSpinner, SpinnerTypes } from "https://x.nest.land/spinners@1.3.0/mod.ts";
 import { sleep } from "https://x.nest.land/sleep@1.0.0/mod.ts";
 
 const terminalSpinner = new TerminalSpinner({
