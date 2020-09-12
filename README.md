@@ -5,8 +5,8 @@
 ### Basic
 ```ts
 
+import {TerminalSpinner, Spinners} from "https://x.nest.land/spinners@1.0.0/mod.ts";
 import { sleep } from "https://x.nest.land/sleep@1.0.0/mod.ts";
-import {TerminalSpinner, Spinners} from "./mod.ts";
 
 const terminalSpinner = new TerminalSpinner("I will be back in about 3 seconds");
 
@@ -19,8 +19,8 @@ terminalSpinner.succeed("Action completed");
 ### Advanced
 ```ts
 
+import {TerminalSpinner, Spinners} from "https://x.nest.land/spinners@1.0.0/mod.ts";
 import { sleep } from "https://x.nest.land/sleep@1.0.0/mod.ts";
-import {TerminalSpinner, Spinners} from "./mod.ts";
 
 const terminalSpinner = new TerminalSpinner({
 	text: "I will be back in about 3 seconds", // telling the user what is going on
@@ -42,6 +42,26 @@ terminalSpinner.succeed("Action completed");
 You can also update the parameters while spinning etc. :) 
 Check the code for details - it should be self explaining.
 
+
+## Trigger Usage Examples
+
+```sh
+deno run https://x.nest.land/spinners@1.0.0/usage-example-basic.ts
+```
+
+```sh
+deno run https://x.nest.land/spinners@1.0.0/usage-example-advanced.ts
+```
+
+## Trigger Test Execution
+
+```sh
+
+deno test https://x.nest.land/spinners@1.0.0/test.ts
+  
+```
+
+
 ## Credits 
-Credits to https://deno.land/x/kia as a lot of its MIT code is just used in this module
+Credits to https://deno.land/x/kia as a lot of its MIT code is just used in this module.
 

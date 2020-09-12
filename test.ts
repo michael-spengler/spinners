@@ -1,18 +1,14 @@
-import { TerminalSpinner } from "./mod.ts";
-import {
-	assertThrows,
-} from "https://deno.land/std@0.51.0/testing/asserts.ts";
+import { TerminalSpinner } from "https://x.nest.land/spinners@1.0.0/mod.ts";
+import { assertThrows } from "https://deno.land/std@0.51.0/testing/asserts.ts";
 import { expect } from "https://deno.land/x/expect/mod.ts";
+import { sleep } from "https://x.nest.land/sleep@1.0.0/mod.ts";
+
 class TestWriter implements Deno.WriterSync {
 	buffer: string[] = [];
 	writeSync(p: Uint8Array): number {
 		this.buffer.push(new TextDecoder().decode(p));
 		return p.length;
 	}
-}
-
-function sleep(ms: number) {
-	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 Deno.test("spinner isSpinning when running", () => {

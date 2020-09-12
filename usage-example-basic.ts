@@ -1,5 +1,5 @@
 import { sleep } from "https://x.nest.land/sleep@1.0.0/mod.ts";
-import {TerminalSpinner, Spinners} from "./mod.ts";
+import {TerminalSpinner, Spinners} from "https://x.nest.land/spinners@1.0.0/mod.ts";
 
 const terminalSpinner = new TerminalSpinner({
 	text: "I will be back in about 3 seconds", // telling the user what is going on
