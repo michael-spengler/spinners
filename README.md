@@ -28,7 +28,7 @@ const terminalSpinner = new TerminalSpinner({
 	spinner: SpinnerTypes.arc, // check the SpinnerTypes - see import
 	indent: 0, // The level of indentation of the spinner in spaces
 	cursor: false, // Whether or not to display a cursor when the spinner is active
-	writer: Deno.stdout // anything using the Writer interface including stdout, stderr, and files
+	writer: Deno.stdout // anything using the Writer interface incl. stdout, stderr, and files
 });
 
 terminalSpinner.start();
