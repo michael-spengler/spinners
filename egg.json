@@ -6,7 +6,7 @@
     "mod.ts",
     "README.md",
     "spinners.ts",
-    "terminal-spinner.test.ts",
+    "test.ts",
     "terminal-spinner.ts",
     "usage-example-advanced.ts",
     "usage-example-basic.ts",
