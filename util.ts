@@ -1,4 +1,4 @@
-import * as Colors from "https://deno.land/std@0.52.0/fmt/colors.ts";
+import * as Colors from "https://deno.land/std@0.203.0/fmt/colors.ts";
 
 // Terminal escape sequences
 const ESC = "\x1b[";
@@ -7,22 +7,22 @@ const ESC = "\x1b[";
  * The colors to be used with the Terminal Spinner
  */
 export type Color =
-	| "black"
-	| "red"
-	| "green"
-	| "yellow"
-	| "blue"
-	| "magenta"
-	| "cyan"
-	| "white"
-	| "gray";
+  | "black"
+  | "red"
+  | "green"
+  | "yellow"
+  | "blue"
+  | "magenta"
+  | "cyan"
+  | "white"
+  | "gray";
 
 /**
  * Converts the Terminal Spinner color type to the Deno color functions
  * @param color The color string
  */
 export function colorise(color: Color) {
-	return Colors[color];
+  return Colors[color];
 }
 
 /**
@@ -31,15 +31,15 @@ export function colorise(color: Color) {
  * @param text The text to be written
  */
 export function writeLine(
-	writer: Deno.WriterSync,
-	encoder: TextEncoder,
-	text: string,
-	indent?: number
+  writer: Deno.WriterSync,
+  encoder: TextEncoder,
+  text: string,
+  indent?: number,
 ) {
-	Deno.writeAllSync(
-		writer,
-		encoder.encode(`\r${indent ? ESC + indent + "C" : ""}${text}`)
-	);
+  Deno.writeAllSync(
+    writer,
+    encoder.encode(`\r${indent ? ESC + indent + "C" : ""}${text}`),
+  );
 }
 
 /**
@@ -47,7 +47,7 @@ export function writeLine(
  * @param encoder A TextEncoder object
  */
 export function clearLine(writer: Deno.WriterSync, encoder: TextEncoder) {
-	Deno.writeAllSync(writer, encoder.encode(ESC + "2K\r"));
+  Deno.writeAllSync(writer, encoder.encode(ESC + "2K\r"));
 }
 
 /**
@@ -55,7 +55,7 @@ export function clearLine(writer: Deno.WriterSync, encoder: TextEncoder) {
  * @param encoder A TextEncoder object
  */
 export function hideCursor(writer: Deno.WriterSync, encoder: TextEncoder) {
-	Deno.writeAllSync(writer, encoder.encode(ESC + "?25l"));
+  Deno.writeAllSync(writer, encoder.encode(ESC + "?25l"));
 }
 
 /**
@@ -63,5 +63,5 @@ export function hideCursor(writer: Deno.WriterSync, encoder: TextEncoder) {
  * @param encoder A TextEncoder object
  */
 export function showCursor(writer: Deno.WriterSync, encoder: TextEncoder) {
-	Deno.writeAllSync(writer, encoder.encode(ESC + "?25h"));
+  Deno.writeAllSync(writer, encoder.encode(ESC + "?25h"));
 }
