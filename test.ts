@@ -1,7 +1,10 @@
 import { TerminalSpinner } from "https://deno.land/x/spinners/mod.ts";
-import { assertThrows } from "https://deno.land/std@0.51.0/testing/asserts.ts";
+import { assertThrows } from "https://deno.land/std@0.203.0/testing/asserts.ts";
 import { expect } from "https://deno.land/x/expect/mod.ts";
-import { sleep } from "https://x.nest.land/sleep@1.0.0/mod.ts";
+
+function sleep(time: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
 
 class TestWriter implements Deno.WriterSync {
   buffer: string[] = [];
